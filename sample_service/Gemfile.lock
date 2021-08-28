@@ -1,5 +1,5 @@
 PATH
-  remote: ../reractor
+  remote: ..
   specs:
     reractor (0.0.1)
 
