@@ -1,0 +1,16 @@
+PATH
+  remote: ../reractor
+  specs:
+    reractor (0.0.1)
+
+GEM
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  reractor!
+
+BUNDLED WITH
+   2.1.4
