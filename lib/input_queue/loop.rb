@@ -1,6 +1,6 @@
 module Reractor
   module InputQueue
-    class Mock
+    class Loop
       def create(pipe)
         loop do
           pipe << {

@@ -1,6 +1,6 @@
 module Reractor
   module OutputQueue
-    class Mock
+    class Stdout
       def create(pipe)
         loop do
           msg = pipe.take
