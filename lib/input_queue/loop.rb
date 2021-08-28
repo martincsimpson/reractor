@@ -1,7 +1,7 @@
 module Reractor
   module InputQueue
     class Loop
-      def create(pipe)
+      def run(pipe)
         loop do
           pipe << {
             "id" => SecureRandom.uuid,

@@ -8,6 +8,21 @@ module Reractor
       Message.new(data)
     end
 
+    def self.error(ttid:, service_name:, exception:)
+      Message.new({
+        "id" => SecureRandom.uuid,
+        "ttid" => ttid,
+        "event" => "handler.failed",
+        "origin" => service_name,
+        "timestamp" => Time.now.to_i,
+        "event_data" => {
+          "exception_class": exception.class,
+          "exception_message": exception.message,
+          "exception_backtrace": exception.backtrace.join("\n")
+        }
+      })
+    end
+
     def initialize(data)
       @id = required_field("id", data, String)
       @ttid = required_field("ttid", data, String)

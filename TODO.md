@@ -1,8 +1,7 @@
-* When sending messages use event data
 * Ability to run inside minitest (mocked pipes)
 * bin tool to "scaffold" new handlers
 * bin tool to generate api contract based on handlers
-* Raising errors back to the stanck (using TTID)
+* Raising errors back to the stack (using TTID)
 * figure out how to implement HTTP endpoint functionalities
   * Maybe support sinatra only? Reractor::HttpTerminator
     * This would raise caught exceptions from the stack (it would act as event terminator)

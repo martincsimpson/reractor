@@ -40,13 +40,13 @@ module Reractor
 
     input_ractors = Reractor.configuration[:number_of_input_threads].times.map do
       Ractor.new input_pipe, Reractor.configuration do |p, c|
-        c[:input_queue].create(p)
+        c[:input_queue].new.run(p)
       end
     end
 
     output_ractors = Reractor.configuration[:number_of_output_threads].times.map do
       Ractor.new output_pipe, Reractor.configuration do |p, c|
-        c[:output_queue].create(p)
+        c[:output_queue].new.run(p)
       end
     end
 

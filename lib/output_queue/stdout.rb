@@ -1,7 +1,7 @@
 module Reractor
   module OutputQueue
     class Stdout
-      def create(pipe)
+      def run(pipe)
         loop do
           msg = pipe.take
           puts msg.to_hash

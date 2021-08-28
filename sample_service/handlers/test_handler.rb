@@ -9,6 +9,12 @@ class TestHandler < Reractor::Handler
   end
 
   def handle(msg)
+    # Test error handling
+    if rand(10) == 5
+      raise "Something broke"
+    end
+
+    # Send back a hash
     {
       message: "blah"
     }
